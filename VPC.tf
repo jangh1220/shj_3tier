@@ -163,31 +163,31 @@ resource "aws_route_table" "private_route_table" {
 }
 
 resource "aws_route_table_association" "private_subnet_1_association" {
-  subnet_id      = aws_subnet.private_subnet_1.id
+  subnet_id      = aws_subnet.private_subnet_web1.id
   route_table_id = aws_route_table.private_route_table.id
 }
 
 resource "aws_route_table_association" "private_subnet_2_association" {
-  subnet_id      = aws_subnet.private_subnet_2.id
+  subnet_id      = aws_subnet.private_subnet_web2.id
   route_table_id = aws_route_table.private_route_table.id
 }
 
 resource "aws_route_table_association" "private_subnet_3_association" {
-  subnet_id      = aws_subnet.private_subnet_3.id
+  subnet_id      = aws_subnet.private_subnet_was1.id
   route_table_id = aws_route_table.private_route_table.id
 }
 
 resource "aws_route_table_association" "private_subnet_4_association" {
-  subnet_id      = aws_subnet.private_subnet_4.id
+  subnet_id      = aws_subnet.private_subnet_was2.id
   route_table_id = aws_route_table.private_route_table.id
 }
 
 resource "aws_route_table_association" "private_subnet_5_association" {
-  subnet_id      = aws_subnet.private_subnet_5.id
+  subnet_id      = aws_subnet.private_subnet_rds_active.id
   route_table_id = aws_route_table.private_route_table.id
 }
 
 resource "aws_route_table_association" "private_subnet_6_association" {
-  subnet_id      = aws_subnet.private_subnet_6.id
+  subnet_id      = aws_subnet.private_subnet_rds_standby.id
   route_table_id = aws_route_table.private_route_table.id
 }
