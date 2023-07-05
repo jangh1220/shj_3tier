@@ -44,7 +44,7 @@ resource "aws_subnet" "public_subnet_2" {
 
 resource "aws_subnet" "private_subnet_web1" {
   vpc_id     = aws_vpc.shj_vpc.id
-  cidr_block = "10.0.100.0/24"
+  cidr_block = "10.0.10.0/24"
   availability_zone = "ap-northeast-2a"
 
   tags = {
@@ -54,7 +54,7 @@ resource "aws_subnet" "private_subnet_web1" {
 
 resource "aws_subnet" "private_subnet_web2" {
   vpc_id     = aws_vpc.shj_vpc.id
-  cidr_block = "10.0.101.0/24"
+  cidr_block = "10.0.11.0/24"
   availability_zone = "ap-northeast-2c"
 
   tags = {
@@ -64,7 +64,7 @@ resource "aws_subnet" "private_subnet_web2" {
 
 resource "aws_subnet" "private_subnet_was1" {
   vpc_id     = aws_vpc.shj_vpc.id
-  cidr_block = "10.0.200.0/24"
+  cidr_block = "10.0.20.0/24"
   availability_zone = "ap-northeast-2a"
 
   tags = {
@@ -74,7 +74,7 @@ resource "aws_subnet" "private_subnet_was1" {
 
 resource "aws_subnet" "private_subnet_was2" {
   vpc_id     = aws_vpc.shj_vpc.id
-  cidr_block = "10.0.201.0/24"
+  cidr_block = "10.0.21.0/24"
   availability_zone = "ap-northeast-2c"
 
   tags = {
@@ -84,7 +84,7 @@ resource "aws_subnet" "private_subnet_was2" {
 
 resource "aws_subnet" "private_subnet_rds_active" {
   vpc_id     = aws_vpc.shj_vpc.id
-  cidr_block = "10.0.300.0/24"
+  cidr_block = "10.0.30.0/24"
   availability_zone = "ap-northeast-2a"
 
   tags = {
@@ -94,7 +94,7 @@ resource "aws_subnet" "private_subnet_rds_active" {
 
 resource "aws_subnet" "private_subnet_rds_standby" {
   vpc_id     = aws_vpc.shj_vpc.id
-  cidr_block = "10.0.301.0/24"
+  cidr_block = "10.0.31.0/24"
   availability_zone = "ap-northeast-2c"
 
   tags = {
