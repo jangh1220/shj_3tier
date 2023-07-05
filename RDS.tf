@@ -4,7 +4,7 @@ resource "aws_db_instance" "rds" {
   engine_version       = "8.0.31"
   instance_class       = "db.t2.micro"
   multi_az             = true
-  identifier           = "shj_rds"
+  identifier           = "shj-rds"
   username             = "shjinfra"
   password             = "shjinfra7"
   parameter_group_name = "rds.mysql8.0"
@@ -15,7 +15,7 @@ resource "aws_db_instance" "rds" {
 
 resource "aws_db_subnet_group" "db_subnet_group" {
   name = "db_subnet_group"
-  subnet_ids = [aws_subnet.private_subnet_rds_active, aws_subnet.private_subnet_rds_standby]
+  subnet_ids = [aws_subnet.private_subnet_rds_active.id, aws_subnet.private_subnet_rds_standby.id]
 
   tags = {
     Name = "db_subnet_group"
