@@ -1,4 +1,4 @@
-resource "aws_db_instance" "rds" {
+resource "aws_db_instance" "default" {
   allocated_storage    = 10
   engine               = "mysql"
   engine_version       = "8.0.31"
@@ -7,7 +7,7 @@ resource "aws_db_instance" "rds" {
   identifier           = "shj-rds"
   username             = "shjinfra"
   password             = "shjinfra7"
-  parameter_group_name = "rds.mysql8.0"
+  parameter_group_name = "default.mysql8.0"
   db_subnet_group_name = "${aws_db_subnet_group.db_subnet_group.id}"
   skip_final_snapshot  = true
   vpc_security_group_ids = [aws_security_group.sg_private_rds.id]
